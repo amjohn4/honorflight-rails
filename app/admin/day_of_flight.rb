@@ -67,8 +67,8 @@ ActiveAdmin.register DayOfFlight do
     end
 
     panel 'Flight Volunteers' do
-      f.has_many :volunteers, label: false do |volunteer|
-        volunteer.inputs
+      f.has_many :day_of_flights_volunteers, label: false do |volunteer|
+        volunteer.inputs :volunteer, :flight_responsibility
       end
     end
 
